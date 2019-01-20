@@ -1,7 +1,7 @@
 string-similarity-ex
 =================
 
-A more powerful script for comparing two strings, based on [string-similarity](https://github.com/aceakash/string-similarity), which can make you get the situation of the accuracy to every single word.
+A more powerful script for comparing two strings, based on [string-similarity](https://github.com/aceakash/string-similarity), which can allow you to get the situation of the accuracy of every single word.
 
 ## Table of Contents
 
@@ -50,14 +50,14 @@ In your code:
 
 ### getBestMatch(mainString, targetString)
 
-Returns an array, which includes all words that is the same as the correct sentence.
+Returns an array, which includes all words that are the same as those of the correct sentence.
 
 ##### Arguments
 
 1. mainString (string): correct sentence
 2. targetString (string): user's sentence
 
-Order can not be reversed.
+Order must not be reversed.
 
 #### Returns
 
@@ -75,7 +75,7 @@ Order can not be reversed.
 
 ### parseFaultTolerance(formatString)
 
-Returns an array, which every item is an object with two properties - "word" and "replaces". 
+Returns an array, in which every item is an object with two properties - "word" and "replaces". 
 
 ##### Arguments
 
@@ -97,7 +97,7 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 
 ### getSentenceReplacements(formatString)
 
-Returns an array including all possibility of replacing word. 
+Returns an array including all possibility of replacing words. 
 
 ##### Arguments
 
@@ -107,7 +107,7 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 
 #### Returns
 
-(array): every item is an object for replacing sentence.
+(array): every item is an object for replacing words in the sentence.
 
 #### Examples
 
@@ -119,7 +119,7 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 
 ### getSimilarSentences(mainString, formatString)
 
-Returns an array including all similar sentences of main string based on the format string.
+Returns an array including all similar sentences of the format main string.
 
 ##### Arguments
 
@@ -130,19 +130,17 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 
 #### Returns
 
-(array): 
+(array): ...
 
 #### Examples
 
 ```
-    var parse = stringSimilarityEx.parseFaultTolerance('soul:sole,so');
-    console.log(parse);
-    // [{"word":"soul","replaces":["sole","so"]}]
+    // 
 ```
 
 ### getSentenceSituation(mainString, targetString, formatString)
 
-Returns an array, which every item is an object with two properties - "word" and "replaces". 
+...
 
 ##### Arguments
 
@@ -158,14 +156,16 @@ Definition of format string: search1:replace1|search2:replace2,replace3
 
 #### Returns
 
-(array): 
+(array): ...
 
 #### Examples
 
 ```
-    var parse = stringSimilarityEx.parseFaultTolerance('soul:sole,so');
-    console.log(parse);
-    // [{"word":"soul","replaces":["sole","so"]}]
+    var key = 'Hello, world!';
+    var answer = 'Hello, word';
+    var parse = stringSimilarityEx.getSentenceSituation();
+
+    // 
 ```
 
 ## Acknowledgements
