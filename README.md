@@ -130,7 +130,7 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 
 #### Returns
 
-(array): every items is string.
+(array): every item is a string.
 
 #### Examples
 
