@@ -119,7 +119,7 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 
 ### getSimilarSentences(mainString, formatString)
 
-Returns an array including all similar sentences of the format main string.
+Returns an array including all similar sentences based on the format main string.
 
 ##### Arguments
 
@@ -148,7 +148,7 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 2. targetString (string): user's sentence
 3. formatString (string): the format of the fault tolerance string
 
-Definition of format string: search1:replace1|search2:replace2,replace3
+Definition of the format string: search1:replace1|search2:replace2,replace3
 - example 1: soul:sole
 - example 2: soul:sole,so
 - example 3: soul:sole,so|well:will
@@ -163,9 +163,13 @@ Definition of format string: search1:replace1|search2:replace2,replace3
 ```
     var key = 'Hello, world!';
     var answer = 'Hello, word';
-    var parse = stringSimilarityEx.getSentenceSituation();
-
-    // 
+    var format = 'world:word';
+    var situation1 = stringSimilarityEx.getSentenceSituation(key, answer);
+    console.log(situation1);
+    // [{"word":"Hello,","correct":1},{"word":"world!","correct":0}]
+    var situation = stringSimilarityEx.getSentenceSituation(key, answer, format);
+    console.log(situation);
+    // [{"word":"Hello,","correct":1},{"word":"world!","correct":1}]
 ```
 
 ## Acknowledgements
