@@ -130,7 +130,7 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 
 #### Returns
 
-(array): ...
+(array): every items is string.
 
 #### Examples
 
@@ -158,7 +158,7 @@ Definition of the format string: search1:replace1|search2:replace2,replace3
 
 #### Returns
 
-(array): ...
+(array): every items is an object with two properties - "word" and "correct". Property "correct" equals 0 indicates the word is not correct. It can be obtained that property "correct" equals 1 indicates the word is correct.
 
 #### Examples
 
