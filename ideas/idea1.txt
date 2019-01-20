@@ -1,0 +1,14 @@
+1 item，1 possibility
+(1): 1
+
+2 items，3 possibilities
+(1 2): 1, 12, 2
+
+3 items，7 possibilities
+(1 2 3): 1, 12, 13, 123, 2, 23, 3
+
+4 items，15 possibilities
+(1 2 3 4): 1, 12, 13, 14, 123, 124, 134, 1234, 2, 23, 24, 234, 3, 34, 4
+
+> Sn = 2^n - 1
+> It seems this thought is not correct. So bad. :(

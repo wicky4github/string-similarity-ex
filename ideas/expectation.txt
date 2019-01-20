@@ -1,0 +1,57 @@
+- paramter 1.   Correct sentence： Metal pipes in coal mines burst and let out smelly steam. 
+- paramter 2.    User's sentence:  Metal parts in coal mines burst and left us smell steam.
+- paramter 3.             format:  pipes:parts|let:left|out:us,oh,owe|smelly:smell,smelling
+
+* Question: Why are there 47 items in the expected array? How to generate the array?
+> Expectation: 
+```
+[
+    {"pipes": "parts"},
+    {"pipes": "parts", "let": "left"},
+    {"pipes": "parts", "let": "left", "out": "us"},
+    {"pipes": "parts", "let": "left", "out": "us", "smelly": "smell"},
+    {"pipes": "parts", "let": "left", "out": "us", "smelly": "smelling"},
+    {"pipes": "parts", "let": "left", "out": "oh"},
+    {"pipes": "parts", "let": "left", "out": "oh", "smelly": "smell"},
+    {"pipes": "parts", "let": "left", "out": "oh", "smelly": "smelling"},
+    {"pipes": "parts", "let": "left", "out": "owe"},
+    {"pipes": "parts", "let": "left", "out": "owe", "smelly": "smell"},
+    {"pipes": "parts", "let": "left", "out": "owe", "smelly": "smelling"},
+    {"pipes": "parts", "let": "left", "smelly": "smelling"},
+    {"pipes": "parts", "let": "left", "smelly": "smelling"},
+    {"pipes": "parts", "out": "us"},
+    {"pipes": "parts", "out": "us", "smelly": "smell"},
+    {"pipes": "parts", "out": "us", "smelly": "smelling"},
+    {"pipes": "parts", "out": "oh"},
+    {"pipes": "parts", "out": "oh", "smelly": "smell"},
+    {"pipes": "parts", "out": "oh", "smelly": "smelling"},
+    {"pipes": "parts", "out": "owe"},
+    {"pipes": "parts", "out": "owe", "smelly": "smell"},
+    {"pipes": "parts", "out": "owe", "smelly": "smelling"},
+    {"pipes": "parts", "smelly": "smell"},
+    {"pipes": "parts", "smelly": "smelling"},
+    {"let": "left"},
+    {"let": "left", "out": "us"},
+    {"let": "left", "out": "us", "smelly": "smell"},
+    {"let": "left", "out": "us", "smelly": "smelling"},
+    {"let": "left", "out": "oh"},
+    {"let": "left", "out": "oh", "smelly": "smell"},
+    {"let": "left", "out": "oh", "smelly": "smelling"},
+    {"let": "left", "out": "owe"},
+    {"let": "left", "out": "owe", "smelly": "smell"},
+    {"let": "left", "out": "owe", "smelly": "smelling"},
+    {"let": "left", "smelly": "smell"},
+    {"let": "left", "smelly": "smelling"},
+    {"out": "us"},
+    {"out": "us", "smelly": "smell"},
+    {"out": "us", "smelly": "smelling"},
+    {"out": "oh"},
+    {"out": "oh", "smelly": "smell"},
+    {"out": "oh", "smelly": "smelling"},
+    {"out": "owe"},
+    {"out": "owe", "smelly": "smell"},
+    {"out": "owe", "smelly": "smelling"},
+    {"smelly": "smell"},
+    {"smelly": "smelling"},
+]
+```
