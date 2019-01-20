@@ -135,18 +135,20 @@ Refer to [getSentenceSituation](#getsentencesituationmainstring-targetstring-for
 #### Examples
 
 ```
-    // 
+    var similarities = stringSimilarityEx.getSimilarSentences('Hello, world!', 'world:word');
+    console.log(similarities);
+    // ["Hello, word!"]
 ```
 
 ### getSentenceSituation(mainString, targetString, formatString)
 
-...
+Main function of "stringSimilarityEx", allow you to get the situation of the accuracy of every single word.
 
 ##### Arguments
 
 1. mainString (string): correct sentence
 2. targetString (string): user's sentence
-3. formatString (string): the format of the fault tolerance string
+3. formatString (string|undefined): the format of the fault tolerance string
 
 Definition of the format string: search1:replace1|search2:replace2,replace3
 - example 1: soul:sole
@@ -164,12 +166,12 @@ Definition of the format string: search1:replace1|search2:replace2,replace3
     var key = 'Hello, world!';
     var answer = 'Hello, word';
     var format = 'world:word';
+    // without tolerance: [{"word":"Hello,","correct":1},{"word":"world!","correct":0}]
     var situation1 = stringSimilarityEx.getSentenceSituation(key, answer);
     console.log(situation1);
-    // [{"word":"Hello,","correct":1},{"word":"world!","correct":0}]
-    var situation = stringSimilarityEx.getSentenceSituation(key, answer, format);
-    console.log(situation);
-    // [{"word":"Hello,","correct":1},{"word":"world!","correct":1}]
+    // with tolerance: [{"word":"Hello,","correct":1},{"word":"world!","correct":1}]
+    var situation2 = stringSimilarityEx.getSentenceSituation(key, answer, format);
+    console.log(situation2);
 ```
 
 ## Acknowledgements
